@@ -1,0 +1,20 @@
+﻿@model AzureTableMVCApp.Models.CustomerEntity
+
+<h2>Add Customer</h2>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label>Name</label>
+        <input asp-for="Name" />
+    </div>
+    <div>
+        <label>Email</label>
+        <input asp-for="Email" />
+    </div>
+    <button type="submit">Add</button>
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <p>@ViewBag.Message</p>
+}
